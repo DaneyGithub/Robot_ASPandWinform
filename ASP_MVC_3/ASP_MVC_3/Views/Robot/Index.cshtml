@@ -1,0 +1,51 @@
+﻿@model ASP_MVC_3.Models.RobotModel
+@{
+    ViewBag.Title = "Index";
+   Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Views/Extra/SiteLocal.css">
+</head>
+
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-md-2">
+        @using (Html.BeginForm("Forward", "Robot"))
+        {
+            <input id="forwardBtn" type="submit" name="forward" value="Forward" />
+        }
+    </div>
+    <div class="col-md-2">
+        @using (Html.BeginForm("Back", "Robot"))
+        {
+            <input id="backBtn" type="submit" name="back" value="Back" />
+        }
+     </div>
+    <div class="col-md-2">
+        @using (Html.BeginForm("Stop", "Robot"))
+        {
+            <input id="stopBtn" type="submit" name="stop" value="Stop" />
+        }
+    </div>
+
+    <div class="col-md-2">
+        @using (Html.BeginForm("Right", "Robot"))
+        {
+            <input id="rightBtn" type="submit" name="right" value="Go Right" />
+        }
+     </div>
+    <div class="col-md-2">
+        @using (Html.BeginForm("Left", "Robot"))
+        {
+            <input id="leftBtn" type="submit" name="left" value="Go Left" />
+        }
+    </div>
+    </div>
+
+
+
+
